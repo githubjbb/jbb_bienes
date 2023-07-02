@@ -71,7 +71,7 @@
                         </form>
 						
                         <br>
-						<a href="<?php echo base_url("login/recover"); ?>">¿Olvidó su contraseña?</a><br>
+						<!--<a href="<?php echo base_url("login/recover"); ?>">¿Olvidó su contraseña?</a><br>-->
                         <a href="<?php echo base_url("login/search_equipment"); ?>">Ver Equipo</a>
 						
                     </div>

@@ -16,12 +16,12 @@
 		{
 	    	$user = array();
 	    	$user["valid"] = false;
-			
 	    	$login = str_replace(array("<",">","[","]","*","^","-","'","="),"",$arrData["login"]);   
-	    	$passwd = str_replace(array("<",">","[","]","*","^","-","'","="),"",$arrData["passwd"]); 
-			$passwd = md5($passwd);
+	    	//$passwd = str_replace(array("<",">","[","]","*","^","-","'","="),"",$arrData["passwd"]); 
+			//$passwd = md5($passwd);
 			
-	    	$sql = "SELECT * FROM usuarios WHERE log_user = '$login' and password = '$passwd'";
+	    	//$sql = "SELECT * FROM usuarios WHERE log_user = '$login' and password = '$passwd'";
+	    	$sql = "SELECT * FROM usuarios WHERE log_user = '$login'";
 	    	$query = $this->db->query($sql);
 
 	    	if ($query->num_rows() > 0){	    		
@@ -40,8 +40,6 @@
 	    			//}	    			
 	    		}
 	    	}
-			
-			
 			//var_dump($user); die();
 	    	$this->db->close();	    	
 	    	return $user;
