@@ -48,9 +48,13 @@ class Login extends CI_Controller {
 	            $r = @ldap_bind($ds, $ldapusercn, $ldappass);
 	            if (!$r) {
 	                @ldap_close($ds);
-	                $data["view"] = "error";
+	                $data['idEquipo'] = 'x';
+	                $data["msj"] = "Error de autenticación. Por favor revisar usuario y contraseña de red.";
+	                $this->session->sess_destroy();
+					$this->load->view('login', $data);
+	                /*$data["view"] = "error";
 	                $data["mensaje"] = "Error de autenticación. Revisar usuario y contraseña de red.";
-	                $this->load->view("layout", $data);
+	                $this->load->view("layout", $data);*/
 	            } else {
 					$data['idEquipo'] = $this->input->post("hddId");
 					//busco datos del usuario

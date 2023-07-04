@@ -31,8 +31,4 @@ $( document ).ready( function () {
 			//alert('Error.');
 		}
 	});
-
-	$('#btnCrearCancelar').click(function () {
-        $(location).attr('href', base_url);
-    });
 });

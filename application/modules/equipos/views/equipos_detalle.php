@@ -180,8 +180,8 @@
 								<select name="profesional_asignado" id="profesional_asignado" class="form-control" required>
 									<option value=''>Select...</option>
 									<option value=1 <?php if($info && $info[0]["profesional_asignado"] == 1) { echo "selected"; }  ?>>Director(a)</option>
-									<option value=2 <?php if($info && $info[0]["profesional_asignado"] == 2) { echo "selected"; }  ?>>Secretario General y de Control Disciplinario</option>
-									<option value=3 <?php if($info && $info[0]["profesional_asignado"] == 3) { echo "selected"; }  ?>>Subdirector de Educativa</option>
+									<option value=2 <?php if($info && $info[0]["profesional_asignado"] == 2) { echo "selected"; }  ?>>Secretario General</option>
+									<option value=3 <?php if($info && $info[0]["profesional_asignado"] == 3) { echo "selected"; }  ?>>Subdirector de Técnica Operativa</option>
 								</select>
 							</div>
 
