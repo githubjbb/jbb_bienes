@@ -53,7 +53,7 @@
 
 				//revisar si es para adicionar o editar
 				if ($idUser == '') {
-					$data['state'] = 0;//si es para adicionar se coloca estado inicial como usuario nuevo
+					$data['state'] = 1;
 					$data['password'] = 'be52d7c1a5e18013492be5fd8ff5f898';//Jardin2021
 					$query = $this->db->insert('usuarios', $data);
 				} else {
