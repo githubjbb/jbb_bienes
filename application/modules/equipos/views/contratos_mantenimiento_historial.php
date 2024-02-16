@@ -55,9 +55,11 @@
 								echo "<td class='text-right'><small>$" . number_format($lista['valor_contrato']) . "</small></td>";
 								echo "<td class='text-right'><small>$" . number_format($lista['saldo_contrato']) . "</small></td>";
 								echo "<td class='text-center'><small>";
+								if (!empty($lista['fk_id_orden_trabajo'])) {
 						?>
-<a href='<?php echo base_url('ordentrabajo/ver_orden/' . $lista['fk_id_orden_trabajo']); ?>' class="btn btn-primary btn-xs" title="No. O.T."> <?php echo $lista['fk_id_orden_trabajo'] ?>&nbsp;<i class="fa fa-briefcase"></i></a>
+								<a href='<?php echo base_url('ordentrabajo/ver_orden/' . $lista['fk_id_orden_trabajo']); ?>' class="btn btn-primary btn-xs" title="No. O.T."> <?php echo $lista['fk_id_orden_trabajo'] ?>&nbsp;<i class="fa fa-briefcase"></i></a>
 						<?php
+								}
 								echo "</small></td>";
 								echo "<td class='text-center'>";
 								switch ($lista['estado_contrato']) {
